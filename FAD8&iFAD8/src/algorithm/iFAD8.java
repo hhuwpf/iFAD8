@@ -118,59 +118,68 @@ public class iFAD8 {
 		int p=(int)dinfi[1];
 		double dd,abs,dev=0;
 		dd=newDire[1];
-		if(p==1){
-			dev=dd*(1+dy)*dinfi[3]+dx;
-			abs=Math.abs(dev);
-			if(abs<0.5+att){
-				res[0]=dinfi[1];
-				res[1]=dev;
-			}else if(abs<=1){
-				res[0]=dinfi[2];
-				res[1]=(abs-1)*dinfi[3];
+		if(dd<0.0000000001){
+			res[0]=dinfi[1];
+			if(p==1 || p==5){
+				res[1]=dx;
 			}else{
-				res[0]=dinfi[2];
-				res[2]=(abs-1)/Math.tan(newDire[0]);
-			}
-		}else if(p==5){
-			dev=dd*(dy-1)*dinfi[3]+dx;
-			abs=Math.abs(dev);
-			if(abs<0.5+att){
-				res[0]=dinfi[1];
-				res[1]=dev;
-			}else if(abs<=1){
-				res[0]=dinfi[2];
-				res[1]=(1-abs)*dinfi[3];
-			}else{
-				res[0]=dinfi[2];
-				res[2]=(1-abs)/Math.tan(newDire[0]);
-			}			
-		}else if(p==3){
-			dev=dd*(1-dx)*dinfi[3]+dy;
-			abs=Math.abs(dev);
-			if(abs<0.5+att){
-				res[0]=dinfi[1];
-				res[2]=dev;
-			}else if(abs<=1){
-				res[0]=dinfi[2];
-				res[2]=(abs-1)*dinfi[3];
-			}else{
-				res[0]=dinfi[2];
-				res[1]=(1-abs)/Math.tan(newDire[0]);
+				res[2]=dy;
 			}
 		}else{
-			dev=0-dd*(1+dx)*dinfi[3]+dy;
-			abs=Math.abs(dev);
-			if(abs<0.5+att){
-				res[0]=dinfi[1];
-				res[2]=dev;
-			}else if(abs<=1){
-				res[0]=dinfi[2];
-				res[2]=(1-abs)*dinfi[3];
+			if(p==1){
+				dev=dd*(1+dy)*dinfi[3]+dx;
+				abs=Math.abs(dev);
+				if(abs<0.5+att){
+					res[0]=dinfi[1];
+					res[1]=dev;
+				}else if(abs<=1){
+					res[0]=dinfi[2];
+					res[1]=(abs-1)*dinfi[3];
+				}else{
+					res[0]=dinfi[2];
+					res[2]=(abs-1)/Math.tan(newDire[0]);
+				}
+			}else if(p==5){
+				dev=dd*(dy-1)*dinfi[3]+dx;
+				abs=Math.abs(dev);
+				if(abs<0.5+att){
+					res[0]=dinfi[1];
+					res[1]=dev;
+				}else if(abs<=1){
+					res[0]=dinfi[2];
+					res[1]=(1-abs)*dinfi[3];
+				}else{
+					res[0]=dinfi[2];
+					res[2]=(1-abs)/Math.tan(newDire[0]);
+				}			
+			}else if(p==3){
+				dev=dd*(1-dx)*dinfi[3]+dy;
+				abs=Math.abs(dev);
+				if(abs<0.5+att){
+					res[0]=dinfi[1];
+					res[2]=dev;
+				}else if(abs<=1){
+					res[0]=dinfi[2];
+					res[2]=(abs-1)*dinfi[3];
+				}else{
+					res[0]=dinfi[2];
+					res[1]=(1-abs)/Math.tan(newDire[0]);
+				}
 			}else{
-				res[0]=dinfi[2];
-				res[1]=(abs-1)/Math.tan(newDire[0]);
+				dev=0-dd*(1+dx)*dinfi[3]+dy;
+				abs=Math.abs(dev);
+				if(abs<0.5+att){
+					res[0]=dinfi[1];
+					res[2]=dev;
+				}else if(abs<=1){
+					res[0]=dinfi[2];
+					res[2]=(1-abs)*dinfi[3];
+				}else{
+					res[0]=dinfi[2];
+					res[1]=(abs-1)/Math.tan(newDire[0]);
+				}
 			}
-		}
+		}		
 		
 		return res;
 	}
@@ -228,7 +237,7 @@ public class iFAD8 {
 			if(a1>(a2+a4)/2+att){
 				r2=pi4-Math.atan((a4-a2)/(2*a1-a2-a4));
 			}else{
-				r2=-pi/2+Math.atan((a1-a2)/(a4-a1));
+				r2=pi*3/4+Math.atan((a2-a4)/(a2+a4-2*a1));
 			}
 			if(a1>a6+att){
 				r3=Math.atan((a6-a3)/(a1-a6));
@@ -263,9 +272,12 @@ public class iFAD8 {
 				}
 			}
 			
-			if(a2>a1+att && a3>a1+att){
+			if(a2>a1-att){
 				nd[0]=pi4;
+			}else if(a3>a1-att){
+				nd[0]=0;
 			}
+			
 			if(nd[0]<0){
 				nd[0]=0;
 			}else if(nd[0]>pi4){
