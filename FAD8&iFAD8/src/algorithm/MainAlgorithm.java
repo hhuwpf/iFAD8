@@ -21,8 +21,8 @@ public class MainAlgorithm {
 		double[][] newDem=fillSink.fill(dem);
 		
 		//calculate drainage directions, next two sentence uses the iFAD8 and FAD8,respectively.
-		//short[][] dir=iFAD8.direction(newDem);  //calculate drainage directions with iFAD8
-		short[][] dir=FAD8.direction(dem);  //calculate drainage directions with FAD8
+		short[][] dir=iFAD8.direction(newDem);  //calculate drainage directions with iFAD8
+		//short[][] dir=FAD8.direction(newDem);  //calculate drainage directions with FAD8
 		
 		DirectionSave.save(dir, directionPath);
 		
