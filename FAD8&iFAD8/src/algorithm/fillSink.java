@@ -94,7 +94,7 @@ public class fillSink {
 		
 		for(int i=0;i<x;i++){
 			for(int j=0;j<y;j++){
-				res[i][j]=dem[i][j]+0.0001*((double)dep1[i][j]);
+				res[i][j]=dem[i][j]+0.01*((double)dep1[i][j]);
 				
 			}
 		}
