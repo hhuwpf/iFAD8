@@ -35,9 +35,7 @@ E-mail: jtliu@hhu.edu.cn
 --------------------------------------------------------------------------
 **2. The Algorithms**
 
-The FAD8 and iFAD8 algorithms are described in Wu et al. (2020). The .pdf file of 
-this paper (file 2019WR026507.pdf) and the Java codes that implement the 
-algorithms are provided. The original paper should be cited appropriately whenever FAD8 or iFAD8 is used.
+The FAD8 and iFAD8 algorithms are described in Wu et al. [2020]. The Java codes that implement the algorithms are provided. The original paper should be cited appropriately whenever FAD8 or iFAD8 is used.
 
 **Citation: **
 Wu, P., Liu, J., Han, X., Liang, Z., Liu, Y., & Fei, J. (2020). Nondispersive drainage direction simulation based on flexible triangular facets. Water Resources Research, 55, e2019WR026507. https://doi.org/10.1029/2019WR026507
