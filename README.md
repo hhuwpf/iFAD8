@@ -87,10 +87,15 @@ The Java classes can be found in “iFAD8\codes\FAD8&iFAD8\src\algorithm\”. Mo
 **6. Things to Keep in Mind**
 
 1.The import DEM should be in the ASCII TXT format.
+
 2.Codes for depression removal based on an old theory of Martz & Garbrcht. [1992] but using a new flooding technique have been contained, so a real-world DEM with depressions and flats can be imported directly, and a gradient of 0.001 m will be added to the flat DEM cells.
+
 3.The outcome drainage directions are in the Esri format, which can be imported into ArcGIS using the function called ASCII to Raster.
+
 4.The application of the executable_version to any DEM with massive cells may be limited because it may be out of the memory set initially. To deal with these DEMs, you may just run the codes but not the executable_version, and the Default VM Arguments should be set, for example, “-Xms 31200m –Xmx 51200m”.
+
 5.The input/output process of Java is inherently inefficient , so users should be prepared for this. Only the codes but not the executable_version can display the running time for each step.
+
 6.A Java structure called PriorityQueue is used to sort the cells with elevations from high to low. Limited by the maximum length of PriorityQueue, the DEM cannot contains too much cells. We do not yet know what the upper limit will be, but we successfully used the codes to calculate drainage directions for a DEM with more than 500,000,000 cells.
 
 Reference: 
