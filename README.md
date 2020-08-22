@@ -12,7 +12,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
 If you wish to use or incorporate this program (or parts of it) into other software that does not meet the GNU General Public License conditions contact the author to request permission.
 
-Pengfei Wu
+**Pengfei Wu**
 
 College of Hydrology and Water Resources, Hohai University
 
@@ -22,7 +22,7 @@ Work phone: +86 18351936707
 
 E-mail: wpf@hhu.edu.cn
 
-Jintao Liu
+**Jintao Liu**
 
 College of Hydrology and Water Resources, Hohai University
 
