@@ -1,8 +1,7 @@
 ﻿**FAD8&iFAD8: Two algorithms for nondispersive drainage direction simulation based on grid digital elevation models**
-
-
-Last edit: Aug. 22, 2020 
 --------------------------------------------------------------------------
+Last edit: Aug. 22, 2020 
+
 **1. Distribution and Copyright**
 
 Copyright (c) 2020 Pengfei Wu, Jintao Liu, Xiaole Han, Zhongmin Liang, Yangyang Liu and Junyuan Fei
@@ -56,19 +55,19 @@ Here an example is provided.
 
 Firstly, run the executable file such as iFAD8.
 
-![img](img\clip_image002.jpg)
+![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image002.jpg)
 
 Secondly, choose the DEM file.
 
-![img](img\clip_image004.jpg)
+![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image004.jpg)
 
 Finally, choose the location to save the drainage directions and name the direction file. Here we set the name as “dir”, and a suffix of “.txt” will be added automatically.
 
-![img](img\clip_image006.jpg) ![img](img\clip_image007.png)
+![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image006.jpg) ![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image007.png)
 
 When the calculation is finished, a message dialog will appear.
 
-![img](img\clip_image008.png)
+![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image008.png)
 
 
 --------------------------------------------------------------------------
@@ -79,9 +78,17 @@ The Java classes can be found in “iFAD8\codes\FAD8&iFAD8\src\algorithm\”. Mo
 --------------------------------------------------------------------------
 **6. Things to Keep in Mind**
 
-*The import DEM should be in the ASCII TXT format.
-*Codes for depression removal based on an old theory of Martz & Garbrcht. [1992] but using a new flooding technique have been contained, so a real-world DEM with depressions and flats can be imported directly, and a gradient of 0.001 m will be added to the flat DEM cells.
-*The outcome drainage directions are in the Esri format, which can be imported into ArcGIS using the function called ASCII to Raster.
-*The application of the executable_version to any DEM with massive cells may be limited because it may be out of the memory set initially. To deal with these DEMs, you may just run the codes but not the executable_version, and the Default VM Arguments should be set, for example, “-Xms 31200m –Xmx 51200m”.
-*The input/output process of Java is inherently inefficient , so users should be prepared for this. Only the codes but not the executable_version can display the running time for each step.
-*A Java structure called PriorityQueue is used to sort the cells with elevations from high to low. Limited by the maximum length of PriorityQueue, the DEM cannot contains too much cells. We do not yet know what the upper limit will be, but we successfully used the codes to calculate drainage directions for a DEM with more than 500,000,000 cells.
+The import DEM should be in the ASCII TXT format.
+
+Codes for depression removal based on an old theory of Martz & Garbrcht. [1992] but using a new flooding technique have been contained, so a real-world DEM with depressions and flats can be imported directly, and a gradient of 0.001 m will be added to the flat DEM cells.
+
+The outcome drainage directions are in the Esri format, which can be imported into ArcGIS using the function called ASCII to Raster.
+
+The application of the executable_version to any DEM with massive cells may be limited because it may be out of the memory set initially. To deal with these DEMs, you may just run the codes but not the executable_version, and the Default VM Arguments should be set, for example, “-Xms 31200m –Xmx 51200m”.
+
+The input/output process of Java is inherently inefficient , so users should be prepared for this. Only the codes but not the executable_version can display the running time for each step.
+
+A Java structure called PriorityQueue is used to sort the cells with elevations from high to low. Limited by the maximum length of PriorityQueue, the DEM cannot contains too much cells. We do not yet know what the upper limit will be, but we successfully used the codes to calculate drainage directions for a DEM with more than 500,000,000 cells.
+
+Reference: 
+MARTZ & GARBRCHT (1992).NUMERICAL DEFINITION OF DRAINAGE NETWORK AND SUBCATCHMENT AREAS FROM DIGITAL ELEVATION MODELS. Computers & Geosciences, 18(6):747-761.
