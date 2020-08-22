@@ -39,17 +39,19 @@ The FAD8 and iFAD8 algorithms are described in Wu et al. (2020). The .pdf file o
 this paper (file 2019WR026507.pdf) and the Java codes that implement the 
 algorithms are provided. The original paper should be cited appropriately whenever FAD8 or iFAD8 is used.
 
-Citation: Wu, P., Liu, J., Han, X., Liang, Z., Liu, Y., & Fei, J. (2020). Nondispersive drainage direction simulation based on flexible triangular facets. Water Resources Research, 55, e2019WR026507. https://doi.org/10.1029/2019WR026507
+**Citation: **
+Wu, P., Liu, J., Han, X., Liang, Z., Liu, Y., & Fei, J. (2020). Nondispersive drainage direction simulation based on flexible triangular facets. Water Resources Research, 55, e2019WR026507. https://doi.org/10.1029/2019WR026507
 
 --------------------------------------------------------------------------
 **3. File Description**
 
-You may find three main files and two main folders in this project.
+You may find four main files and two main folders in this project.
 1. README.md: FAD8 and iFAD8 manual.
 2. Himmelblau.txt: an ASCII DEM file for example discretized from the Himmelblau terrain proposed by Orlandini et al. [2014] (1 m resolution; 501×501 cells)
 3. LICENSE: A copy of the full GNU General Public License.
-4. codes folder: include a folder called FAD8&iFAD8, which is a project of Eclipse code editor, and containing the codes.
-5. executable_version folder: include FAD8 and iFAD8 executable file complied for Windows.
+4. 2019WR026507.pdf: The paper introduces the FAD8 and iFAD8 algorithms.
+5. codes folder: include a folder called FAD8&iFAD8, which is a project of Eclipse code editor, and containing the codes.
+6. executable_version folder: include FAD8 and iFAD8 executable file complied for Windows.
 
 Reference: 
 Orlandini, S., G. Moretti, and A. Gavioli (2014). Analytical basis for determining slope lines in grid digital elevation models. Water Resour. Res., 50(1), 526–539, doi:10.1002/2013WR014606.
