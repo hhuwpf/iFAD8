@@ -55,19 +55,19 @@ Here an example is provided.
 
 Firstly, run the executable file such as iFAD8.
 
-![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image002.jpg)
+![](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image002.jpg)
 
 Secondly, choose the DEM file.
 
-![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image004.jpg)
+![](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image004.jpg)
 
 Finally, choose the location to save the drainage directions and name the direction file. Here we set the name as “dir”, and a suffix of “.txt” will be added automatically.
 
-![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image006.jpg) ![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image007.png)
+![](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image006.jpg) ![](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image007.png)
 
 When the calculation is finished, a message dialog will appear.
 
-![Image text](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image008.png)
+![](https://github.com/hhuwpf/iFAD8/tree/master/img/clip_image008.png)
 
 
 --------------------------------------------------------------------------
