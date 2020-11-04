@@ -26,13 +26,14 @@ public class MainClass {
 		
 		System.out.println("Import DEM finished!"+df.format(System.currentTimeMillis()));
 		
-		FillSink.fill(dem,parameterPath);
+		double[][] filled_dem=FillSink.fill(dem,parameterPath);
+		dem=new double[1][1];
 		
 		System.out.println("Filling depressions finished!"+df.format(System.currentTimeMillis()));
 		
 		//calculate drainage directions, next two sentence uses the iFAD8 and FAD8,respectively.
-		short[][] dir=iFAD8.direction(dem,parameterPath);  //calculate drainage directions with iFAD8
-		//short[][] dir=FAD8.direction(dem,parameterPath);  //calculate drainage directions with FAD8
+		short[][] dir=iFAD8.direction(filled_dem,parameterPath);  //calculate drainage directions with iFAD8
+		//short[][] dir=FAD8.direction(filled_dem,parameterPath);  //calculate drainage directions with FAD8
 				
 		System.out.println("Calculating directions finished!"+df.format(System.currentTimeMillis()));
 				

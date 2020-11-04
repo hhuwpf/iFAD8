@@ -17,7 +17,7 @@ import java.util.Queue;
  */
 public class FillSink {
 	
-	public static void fill(double[][] dem, String parameterPath) throws FileNotFoundException{
+	public static double[][] fill(double[][] dem, String parameterPath) throws FileNotFoundException{
 		
 		double noData=ParameterRead.readData(parameterPath, 6);
 		double nodata1=noData+1;
@@ -87,7 +87,7 @@ public class FillSink {
 			}			
 		}
 		
-		
+		return dem;
 	}
 	
 	//Comparator to sort the cells with elevations from low to high.
