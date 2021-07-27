@@ -340,7 +340,7 @@ public class FAD8 {
 	//Comparator to sort the cells with elevations from high to low.
     public static Comparator<block1> zComparator = new Comparator<block1>(){
         public int compare(block1 c1, block1 c2) {
-        	return  (int) ((c2.getZ() - c1.getZ())*1000);
+        	return  (int) ((c2.getZ() - c1.getZ())*1000000);
         }
     };
     
